@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const formFields = {
-  firstName: "",
+  firstName: localStorage.getItem("firstName"),
   email: ""
 };
 
@@ -42,7 +42,7 @@ export default function SignupForm() {
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>
-          
+
           <TextField
             id="outlined-name"
             label="First Name"

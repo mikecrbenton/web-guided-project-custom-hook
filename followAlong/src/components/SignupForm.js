@@ -35,7 +35,10 @@ const useForm = (initialState)=> {
 
   const clearForm = e => {
     e.preventDefault();
-    setValues("");
+    setValues({
+      email:"",
+      firstName:""
+    });
   };
 
   return [values, handleChanges, clearForm];

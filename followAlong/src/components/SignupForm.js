@@ -42,7 +42,7 @@ const useForm = (initialState)=> {
 }
 
 const formFields = {
-  firstame: "",
+  firstName: "",
   email: ""
 };
 

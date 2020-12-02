@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-const useForm = (initialState)=> {
-    const [values, setValues] = useState(initialState);
+const useForm = (formFields)=> {
+    const [values, setValues] = useState(formFields);
   
     const handleChanges = e => {
       console.log(e.target.name);
@@ -14,7 +14,7 @@ const useForm = (initialState)=> {
   
     const clearForm = e => {
       e.preventDefault();
-      setValues(initialState);
+      setValues(formFields);
     };
   
     return [values, handleChanges, clearForm];

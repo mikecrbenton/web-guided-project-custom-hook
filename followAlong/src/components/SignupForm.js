@@ -22,18 +22,18 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const useForm = (initialState)=> {
-  const [value, setValue] = useState(initialState);
+  const [values, setValues] = useState(initialState);
 
   const handleChanges = e => {
-    setValue(e.target.value);
+    setValues(e.target.value);
   };
 
   const clearForm = e => {
     e.preventDefault();
-    setValue("");
+    setValues("");
   };
 
-  return [value, handleChanges, clearForm];
+  return [values, handleChanges, clearForm];
 }
 
 const formFields = {

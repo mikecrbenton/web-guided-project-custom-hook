@@ -21,26 +21,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const useForm = (initialState)=> {
-  const [values, setValues] = useState(initialState);
-
-  const handleChanges = e => {
-    console.log(e.target.name);
-    
-    setValues({
-      ...values,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const clearForm = e => {
-    e.preventDefault();
-    setValues(initialState);
-  };
-
-  return [values, handleChanges, clearForm];
-}
-
 const formFields = {
   firstName: "",
   lastName: "",
@@ -54,7 +34,7 @@ export default function SignupForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(`${formValues.firstName} ${formValues.lastName} ${formValues.email} ${formValues.description} `);
+    alert(`${formValues.firstName} ${formValues.lastName} ${formValues.email} ${formValues.description}`);
   };
 
   return (

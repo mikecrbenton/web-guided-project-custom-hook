@@ -35,10 +35,7 @@ const useForm = (initialState)=> {
 
   const clearForm = e => {
     e.preventDefault();
-    setValues({
-      email:"",
-      firstName:""
-    });
+    setValues(initialState);
   };
 
   return [values, handleChanges, clearForm];
@@ -46,6 +43,8 @@ const useForm = (initialState)=> {
 
 const formFields = {
   firstName: "",
+  lastName: "",
+  description:"",
   email: ""
 };
 

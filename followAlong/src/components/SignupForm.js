@@ -32,6 +32,8 @@ const useForm = (initialState)=> {
     e.preventDefault();
     setFirstName("");
   };
+
+  return [firstName, handleChanges, clearForm];
 }
 
 export default function SignupForm() {

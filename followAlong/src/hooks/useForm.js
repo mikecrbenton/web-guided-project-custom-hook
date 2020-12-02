@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useLocalStorage = (initialValue) => {
+const useLocalStorage = (key, initialValue) => {
     //1. When we setup state, check to see if our value is already inside of localStorage.
     //2. If value is not in localStorage, set initialValue to localStorage
     //3. When we set state value, also set localStorage value.
@@ -8,8 +8,10 @@ const useLocalStorage = (initialValue) => {
     const [storedValue, setStoredValue]  = useState(()=>{
         if (localStorage.getItem(key)) {
             return JSON.parse(localStorage.getItem(key));
+        } else {
+            localStorage.setItem(key, JSON.stringify(initialValue));
+            return initialValue;
         }
-        return initialValue;
     });
 }
 

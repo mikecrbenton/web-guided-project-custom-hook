@@ -13,6 +13,11 @@ const useLocalStorage = (key, initialValue) => {
             return initialValue;
         }
     });
+
+    const setValue = value => {
+        setStoredValue(value);
+        localStorage.setItem(key, value);
+    }
 }
 
 const useForm = (formFields)=> {

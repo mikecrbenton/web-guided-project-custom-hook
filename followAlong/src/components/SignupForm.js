@@ -54,7 +54,7 @@ export default function SignupForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(`${formValues.firstName} ${formValues.email}`);
+    alert(`${formValues.firstName} ${formValues.lastName} ${formValues.email} ${formValues.description} `);
   };
 
   return (

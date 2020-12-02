@@ -42,6 +42,7 @@ function App() {
           </div>
         )}
       </div>
+      
       <div id="pokeList">
         {pokemen.map((pokemon) => (
           <div

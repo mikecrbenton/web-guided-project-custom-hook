@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import "./styles.scss";
 
 import data from "../data";
@@ -12,10 +13,9 @@ function App() {
   }, []);
 
   const handlePoke = (id) => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-      .then((res) => res.json())
-      .then((data) => {
-        setSelectedPokemon(data);
+    axios(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+      .then((res) => {
+        setSelectedPokemon(res.data);
       });
   };
 

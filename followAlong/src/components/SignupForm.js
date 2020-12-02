@@ -25,10 +25,9 @@ const useForm = (initialState)=> {
   const [values, setValues] = useState(initialState);
 
   const handleChanges = e => {
-    const key = "email"
     setValues({
       ...values,
-      [key]: e.target.value
+      [e.target.name]: e.target.value
     });
   };
 
@@ -65,7 +64,7 @@ export default function SignupForm() {
             className={classes.textField}
             name="firstName"
             value={formValues.firstName}
-            onChange={handleFChanges}
+            onChange={handleChanges}
             margin="normal"
             variant="outlined"
           />

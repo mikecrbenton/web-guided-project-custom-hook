@@ -42,6 +42,7 @@ export default function SignupForm() {
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>
+          
           <TextField
             id="outlined-name"
             label="First Name"
@@ -68,6 +69,7 @@ export default function SignupForm() {
             <Button color="red" onClick={clearForm}>
               Clear
             </Button>
+
             <Button color="blue" type="submit">
               Submit
             </Button>

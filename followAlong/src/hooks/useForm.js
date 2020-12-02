@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const useLocalStorage = (initialValue) => {
-    
+    const [storedValue, setStoredValue]  = useState();
 }
 
 const useForm = (formFields)=> {

@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const formFields = {
-  firstName: localStorage.getItem("firstName"),
+  firstName: "",
   email: ""
 };
 

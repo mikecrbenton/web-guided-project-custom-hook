@@ -25,9 +25,10 @@ const useForm = (initialState)=> {
   const [values, setValues] = useState(initialState);
 
   const handleChanges = e => {
+    const key = "email"
     setValues({
       ...values,
-      email: e.target.value
+      [key]: e.target.value
     });
   };
 

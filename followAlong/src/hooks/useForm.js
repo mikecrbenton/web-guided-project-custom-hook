@@ -6,6 +6,9 @@ const useLocalStorage = (initialValue) => {
     //3. When we set state value, also set localStorage value.
 
     const [storedValue, setStoredValue]  = useState(()=>{
+        if (localStorage.getItem(key)) {
+            return JSON.parse(localStorage.getItem(key));
+        }
         return initialValue;
     });
 }

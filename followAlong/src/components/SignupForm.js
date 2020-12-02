@@ -25,8 +25,6 @@ const useStyles = makeStyles(theme => ({
 
 const formFields = {
   firstName: "",
-  lastName: "",
-  description:"",
   email: ""
 };
 
@@ -36,7 +34,7 @@ export default function SignupForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(`${formValues.firstName} ${formValues.lastName} ${formValues.email} ${formValues.description}`);
+    alert(`${formValues.firstName} ${formValues.email}`);
   };
 
   return (
@@ -57,18 +55,6 @@ export default function SignupForm() {
 
           <TextField
             id="outlined-name"
-            label="Last Name"
-            className={classes.textField}
-            name="lastName"
-            value={formValues.lastName}
-            onChange={handleChanges}
-            margin="normal"
-            variant="outlined"
-          />
-
-
-          <TextField
-            id="outlined-name"
             label="Email"
             className={classes.textField}
             name="email"
@@ -77,18 +63,6 @@ export default function SignupForm() {
             margin="normal"
             variant="outlined"
           />
-
-          <TextField
-            id="outlined-name"
-            label="Description"
-            className={classes.textField}
-            name="description"
-            value={formValues.description}
-            onChange={handleChanges}
-            margin="normal"
-            variant="outlined"
-          />
-
 
           <div className="flexer">
             <Button color="red" onClick={clearForm}>

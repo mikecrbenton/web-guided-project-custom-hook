@@ -39,6 +39,7 @@ const useForm = (initialState)=> {
 export default function SignupForm() {
   const classes = useStyles();
   const [firstName, handleChanges, clearForm] = useForm("");
+  const [email, handleChanges, clearForm] = useForm("");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -60,6 +61,18 @@ export default function SignupForm() {
             margin="normal"
             variant="outlined"
           />
+
+          <TextField
+            id="outlined-name"
+            label="Email"
+            className={classes.textField}
+            name="email"
+            value={email}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+
           <div className="flexer">
             <Button color="red" onClick={clearForm}>
               Clear

@@ -25,7 +25,10 @@ const useForm = (initialState)=> {
   const [values, setValues] = useState(initialState);
 
   const handleChanges = e => {
-    setValues(e.target.value);
+    setValues({
+      ...values,
+      email: e.target.value
+    });
   };
 
   const clearForm = e => {

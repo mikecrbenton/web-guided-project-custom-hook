@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+const useLocalStorage = (initialValue) => {
+    
+}
+
 const useForm = (formFields)=> {
     const [values, setValues] = useState(formFields);
   

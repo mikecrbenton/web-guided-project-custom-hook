@@ -25,7 +25,7 @@ const useForm = (initialState)=> {
   const [values, setValues] = useState(initialState);
 
   const handleChanges = e => {
-    console.log(e.target);
+    console.log(e.target.name);
     
     setValues({
       ...values,
@@ -42,7 +42,7 @@ const useForm = (initialState)=> {
 }
 
 const formFields = {
-  firstName: "",
+  firstame: "",
   email: ""
 };
 

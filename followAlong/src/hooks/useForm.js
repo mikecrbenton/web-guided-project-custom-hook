@@ -19,7 +19,7 @@ const useLocalStorage = (key, initialValue) => {
 }
 
 const useForm = (formFields)=> {
-    const [values, setValues] = useLocalStorage(formFields);
+    const [values, setValues] = useLocalStorage('form', formFields);
   
     const handleChanges = e => {
       setValues({

@@ -43,11 +43,11 @@ const formFields = {
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [firstName, handleChanges, clearForm] = useForm(formFields);
+  const [formValues, handleChanges, clearForm] = useForm(formFields);
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(`${firstName} ${email}`);
+    alert(`${formValues.firstName} ${formValues.email}`);
   };
 
   return (
@@ -60,7 +60,7 @@ export default function SignupForm() {
             label="First Name"
             className={classes.textField}
             name="firstName"
-            value={firstName}
+            value={formValues.firstName}
             onChange={handleFChanges}
             margin="normal"
             variant="outlined"
@@ -71,7 +71,7 @@ export default function SignupForm() {
             label="Email"
             className={classes.textField}
             name="email"
-            value={email}
+            value={formValues.email}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"

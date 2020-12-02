@@ -18,10 +18,12 @@ const useLocalStorage = (key, initialValue) => {
         setStoredValue(value);
         localStorage.setItem(key, value);
     }
+
+    return [storedValue, setValue];
 }
 
 const useForm = (formFields)=> {
-    const [values, setValues] = useState(formFields);
+    const [values, setValues] = useLocalStorage(formFields);
   
     const handleChanges = e => {
       setValues({

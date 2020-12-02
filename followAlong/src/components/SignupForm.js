@@ -24,23 +24,22 @@ const useStyles = makeStyles(theme => ({
 const useForm = (initialState)=> {
   const [firstName, setFirstName] = useState(initialState);
 
-}
-
-export default function SignupForm() {
-  const classes = useStyles();
-  
   const handleChanges = e => {
     setFirstName(e.target.value);
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert(firstName);
   };
 
   const clearForm = e => {
     e.preventDefault();
     setFirstName("");
+  };
+}
+
+export default function SignupForm() {
+  const classes = useStyles();
+  
+  const handleSubmit = e => {
+    e.preventDefault();
+    alert(firstName);
   };
 
   return (

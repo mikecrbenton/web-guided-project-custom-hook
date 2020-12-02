@@ -22,18 +22,18 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const useForm = (initialState)=> {
-  const [firstName, setFirstName] = useState(initialState);
+  const [value, setValue] = useState(initialState);
 
   const handleChanges = e => {
-    setFirstName(e.target.value);
+    setValue(e.target.value);
   };
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName("");
+    setValue("");
   };
 
-  return [firstName, handleChanges, clearForm];
+  return [value, handleChanges, clearForm];
 }
 
 export default function SignupForm() {
